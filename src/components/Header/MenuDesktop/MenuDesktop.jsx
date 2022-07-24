@@ -1,5 +1,5 @@
 import { OutlineButton, PrimaryButton } from '~/components/Buttons';
-import { MENU_ITEMS } from '~/components/Constants/menuItems';
+import { MENU_ITEMS } from '~/constants/menuItems';
 import MenuDesktopItems from './MenuDesktopItems';
 
 const MenuDesktop = (props) => {

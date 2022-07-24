@@ -1,7 +1,7 @@
 import { GrClose } from 'react-icons/gr';
 import { OutlineButton, PrimaryButton } from '~/components/Buttons';
-import { MENU_ITEMS } from '~/components/Constants/menuItems';
 import MenuMobileItem from './MenuMobileItem';
+import { MENU_ITEMS } from '~/constants/menuItems';
 const MenuMobile = ({ open, onClose }) => {
     return (
         <>

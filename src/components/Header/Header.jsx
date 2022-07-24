@@ -1,9 +1,7 @@
-import { MENU_ITEMS } from '../Constants/menuItems';
+import { useEffect, useRef, useState } from 'react';
+import { BiMenuAltRight } from 'react-icons/bi';
 import MenuDesktop from './MenuDesktop/MenuDesktop';
 import MenuMobile from './MenuMobile/MenuMobile';
-import { BiMenuAltRight } from 'react-icons/bi';
-import { IoMdClose } from 'react-icons/io';
-import { useEffect, useRef, useState } from 'react';
 
 const Header = (props) => {
     const [open, setOpen] = useState(false);
@@ -31,7 +29,7 @@ const Header = (props) => {
     }, []);
 
     //Handle to close menu
-    const handleOnClose = () => {
+    const handleMenuMobile = () => {
         setOpen(!open);
     };
 
@@ -43,7 +41,7 @@ const Header = (props) => {
                     <p className="text-2xl font-bold">
                         Launch<span className="text-primary">.</span>
                     </p>
-                    <div className="md:hidden text-3xl" onClick={() => setOpen(!open)}>
+                    <div className="md:hidden text-3xl" onClick={handleMenuMobile}>
                         <BiMenuAltRight />
                     </div>
                 </div>
@@ -52,7 +50,7 @@ const Header = (props) => {
                 <MenuDesktop />
 
                 {/* Menu for Mobile */}
-                <MenuMobile open={open} onClose={handleOnClose} />
+                <MenuMobile open={open} onClose={handleMenuMobile} />
             </div>
         </header>
     );

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { MdOutlineKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 
 const MenuMobileItem = ({ items }) => {
     const [openItem, setOpenItem] = useState(false);
